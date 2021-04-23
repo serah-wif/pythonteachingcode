@@ -12,9 +12,9 @@ def home():
     
     return render_template("home.html",myName="")
 
-@app.route('/about/')
-def about():
-    return render_template("about.html")
+@app.route('/serah/')
+def seraht():
+    return render_template("serah.html")
 
 if __name__=="__main__":
     app.run(debug=True)

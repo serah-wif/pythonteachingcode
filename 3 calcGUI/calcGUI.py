@@ -1,5 +1,6 @@
 from tkinter import *
 from math import sqrt as sqr
+from math import sin as sin
 
 
 class Application(Frame):
@@ -74,6 +75,7 @@ class Application(Frame):
         e = e.replace("²", "**2")
         e = e.replace("^", "**")
         e = e.replace("÷", "/")
+        e.replace("sin","sin")
 
         try:
             ans = eval(e)
@@ -144,6 +146,9 @@ class Application(Frame):
         Creates the widgets to be used in the grid.
         :return: None
         """
+        self.sin_bttn = Button(self, text="sin", width=9, height=3, command=lambda: self.add_chr('sin'))
+        self.sin_bttn.grid(row=1, column=6)
+
         self.eq_bttn = Button(self, text="=", width=20, height=3, bg="lightgrey", command=lambda: self.calculate())
         self.eq_bttn.grid(row=4, column=4, columnspan=2)
 

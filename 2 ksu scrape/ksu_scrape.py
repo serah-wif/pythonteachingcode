@@ -3,7 +3,9 @@ TO use this code, you will first need to install the three packages being import
 '''
 from bs4 import BeautifulSoup
 import requests
-import csv
+with open('simple.html',) as html_file:
+
+import csvpip
 from datetime import datetime
 
 
@@ -17,6 +19,7 @@ csv_writer = csv.writer(ksu_news_csv)
 csv_writer.writerow(["Number","Title","Source","URL","Date"])
 
 #print(soup.prettify())
+
 
 #blog_post = soup.find('ul',class_='blog_listing')
 blog_posts = soup.find('ul',class_='blog_listing')
